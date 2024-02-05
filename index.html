@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSnakeMania</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+        body{
+            /* background-image: url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap'); */
+            background-image: url(8552473.jpg);
+            background-repeat: no-repeat; 
+            background-size: cover;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        canvas{
+            box-shadow: black 20px 10px 50px;
+        }
+        #hiscoreBox{
+            /* position: absolute; */
+            /* top: 59px;
+            right: 140px; */
+            /* font-size: 39px; */
+            text-shadow: 2px 2px 8px #ffffff;
+            font-weight: bold;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-shadow: 2px 2px 8px #ffffff;">Snake Game</h1>
+    <h2 id="hiscoreBox">High Score: 0</h2>
+    <canvas id="game" width="400"height="400" />
+    <script src="index.js">
+
+    </script>
+</body>
+</html>
+
+
+
