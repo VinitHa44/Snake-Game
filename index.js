@@ -119,23 +119,12 @@ function isGameOver() {
 function drawscore() {
     ctx.fillStyle = "white";
     ctx.font = "10px Verdana";
-    ctx.fillText("Score " + score, canvas.width - 50, 10)
-
-
-
-
-    
+    ctx.fillText("Score " + score, canvas.width - 50, 10)    
 }
 function clearScreen() {
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
   }
-// function clearScreen() {
-//     ctx.fillStyle = "black";
-//     ctx.fillRect(0, 0, canvas.Width, canvas.height);
-//  }
-
-
 function drawSnake() {
     ctx.fillStyle = "green";
     for(let i = 0;i< snakeParts.length; i++) {
@@ -169,28 +158,15 @@ function checkAppleCollision() {
         tailLength++;
         score++;
 
-
-
-
         if(score>hiscoreval){
             hiscoreval = score;
             localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
             hiscoreBox.innerHTML = "HiScore: " + hiscoreval;
         }
         // scoreBox.innerHTML = "Score: " + score;
-
-
-
-
-
         gulpSound.play();
     }
 }
-
-
-
-
-
 let hiscore = localStorage.getItem("hiscore");
 if(hiscore === null){
     hiscoreval = 0;
@@ -200,10 +176,6 @@ else{
     hiscoreval = JSON.parse(hiscore);
     hiscoreBox.innerHTML = "High Score: " + hiscore;
 }
-
-
-
-
 
 document.body.addEventListener("keydown",keyDown);
 
@@ -244,6 +216,4 @@ function keyDown(event) {
       move.play();
     }
   }
-
-
 drawGame();
